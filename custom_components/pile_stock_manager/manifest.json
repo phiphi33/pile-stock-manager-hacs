@@ -1,0 +1,11 @@
+{
+  "domain": "pile_stock_manager",
+  "name": "Gestionnaire de Stock de Piles",
+  "documentation": "https://github.com/phiphi33/pile-stock-manager",
+  "dependencies": [],
+  "codeowners": ["@votre-username"],
+  "requirements": [],
+  "version": "1.0.0",
+  "config_flow": true,
+  "iot_class": "local_polling"
+}
