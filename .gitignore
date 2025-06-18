@@ -1,0 +1,19 @@
+# Ignorer tout par défaut
+*
+
+# Autoriser certains types de fichiers
+!*.yaml
+!*.md
+!*.py
+!.gitignore
+
+# Ignorer les fichiers sensibles
+secrets.yaml
+known_devices.yaml
+ip_bans.yaml
+
+# Ignorer les dossiers système HA
+.storage/
+.cloud/
+.google.token
+home-assistant.log
