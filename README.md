@@ -6,16 +6,16 @@ Gestionnaire de Stock de Piles - Intégration personnalisée pour Home Assistant
 [![version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/votre-username/pile-stock-manager)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Une intégration personnalisée pour Home Assistant permettant de gérer un inventaire de piles avec des capteurs temps réel, des services de gestion et une persistance des données.[1][5]
+Une intégration personnalisée pour Home Assistant permettant de gérer un inventaire de piles avec des capteurs temps réel, des services de gestion et une persistance des données.
 
 ## ✨ Fonctionnalités
 
-- **Capteurs temps réel** : Suivi automatique du stock pour chaque type de pile[1]
-- **Capteur de stock total** : Vue d'ensemble de l'inventaire complet[1]
-- **Services intégrés** : Ajouter, retirer et remettre à zéro le stock[5]
-- **Persistance des données** : Sauvegarde automatique dans un fichier JSON[5]
-- **Interface utilisateur** : Configuration simple via l'interface Home Assistant[4]
-- **Mise à jour forcée** : Capteurs avec `force_update = True` pour des données temps réel[1]
+- **Capteurs temps réel** : Suivi automatique du stock pour chaque type de pile
+- **Capteur de stock total** : Vue d'ensemble de l'inventaire complet
+- **Services intégrés** : Ajouter, retirer et remettre à zéro le stock
+- **Persistance des données** : Sauvegarde automatique dans un fichier JSON
+- **Interface utilisateur** : Configuration simple via l'interface Home Assistant
+- **Mise à jour forcée** : Capteurs avec `force_update = True` pour des données temps réel
 
 ## 🔧 Installation
 
@@ -41,13 +41,13 @@ Une intégration personnalisée pour Home Assistant permettant de gérer un inve
 1. Allez dans **Configuration** → **Intégrations**
 2. Cliquez sur **Ajouter une intégration**
 3. Recherchez "Gestionnaire de Stock de Piles"
-4. Suivez les instructions de configuration[4]
+4. Suivez les instructions de configuration
 
 Aucune configuration supplémentaire n'est requise. L'intégration se configure automatiquement.
 
 ## 🔋 Types de Piles Supportées
 
-L'intégration supporte 8 types de piles couramment utilisées :[3]
+L'intégration supporte 8 types de piles couramment utilisées :
 
 | Type | Description | Utilisation courante |
 |------|-------------|---------------------|
@@ -62,7 +62,7 @@ L'intégration supporte 8 types de piles couramment utilisées :[3]
 
 ## 📊 Capteurs Créés
 
-Après installation, les capteurs suivants sont automatiquement créés :[1]
+Après installation, les capteurs suivants sont automatiquement créés :
 
 ### Capteurs Individuels
 - `sensor.stock_cr2450` - Stock des piles CR2450
@@ -75,14 +75,14 @@ Après installation, les capteurs suivants sont automatiquement créés :[1]
 - `sensor.stock_aaa` - Stock des piles AAA
 
 ### Capteur Global
-- `sensor.stock_total_piles` - Stock total de toutes les piles[1]
+- `sensor.stock_total_piles` - Stock total de toutes les piles
 
-Tous les capteurs utilisent l'unité "unités" et sont mis à jour en temps réel.[1]
+Tous les capteurs utilisent l'unité "unités" et sont mis à jour en temps réel.
 
 ## 🛠️ Services Disponibles
 
 ### `pile_stock_manager.add_stock`
-Ajouter des piles au stock[5]
+Ajouter des piles au stock
 
 service: pile_stock_manager.add_stock
 data:
@@ -92,11 +92,11 @@ quantity: 5
 text
 
 **Paramètres :**
-- `pile_type` (requis) : Type de pile à ajouter[3]
-- `quantity` (optionnel) : Quantité à ajouter (défaut: 1)[5]
+- `pile_type` (requis) : Type de pile à ajouter
+- `quantity` (optionnel) : Quantité à ajouter (défaut: 1)
 
 ### `pile_stock_manager.remove_stock`
-Retirer des piles du stock[5]
+Retirer des piles du stock
 
 service: pile_stock_manager.remove_stock
 data:
@@ -106,11 +106,11 @@ quantity: 2
 text
 
 **Paramètres :**
-- `pile_type` (requis) : Type de pile à retirer[3]
-- `quantity` (optionnel) : Quantité à retirer (défaut: 1)[5]
+- `pile_type` (requis) : Type de pile à retirer
+- `quantity` (optionnel) : Quantité à retirer (défaut: 1)
 
 ### `pile_stock_manager.reset_stock`
-Remettre à zéro tout l'inventaire[5]
+Remettre à zéro tout l'inventaire
 
 service: pile_stock_manager.reset_stock
 
@@ -181,11 +181,11 @@ text
 ### Les capteurs ne se mettent pas à jour
 - Vérifiez les logs Home Assistant pour les erreurs
 - Redémarrez Home Assistant
-- Les capteurs utilisent `force_update = True` pour garantir les mises à jour[1]
+- Les capteurs utilisent `force_update = True` pour garantir les mises à jour
 
 ### Perte des données de stock
 - Vérifiez la présence du fichier `pile_stock.json` dans le dossier de configuration
-- Vérifiez les permissions d'écriture sur le dossier de configuration[5]
+- Vérifiez les permissions d'écriture sur le dossier de configuration
 
 ### Service non disponible
 - Assurez-vous que l'intégration est correctement installée et configurée
@@ -218,7 +218,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 - Communauté Home Assistant pour l'inspiration
 - HACS pour simplifier les installations d'intégrations personnalisées
-- Tous les contributeurs et utilisateurs de cette intégration
+
 
 ---
 
